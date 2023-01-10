@@ -1,9 +1,11 @@
 import ProjectCard from "./projectCard";
+import { Project } from "./types/project";
 
-export default function ProjectContainer() {
+export default function ProjectContainer({Projects}: {Projects: Project[] }) {
     return (
         <div>
-            <ProjectCard project={{name: "test", image: "test", tags: ["test1", "test2"]}}/>
+            {Projects.map((proj, idx) => <ProjectCard key={idx} project={proj}/>)}
         </div>
     )
 }
+

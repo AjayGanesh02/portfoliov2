@@ -3,7 +3,7 @@ import { navLinks } from "../src/data"
 
 export default function NavBar() {
     return (
-        <div className="flex flex-col sticky left-0 w-1/6">
+        <div className="flex flex-col sticky left-0 w-1/6 text-center">
             <div>
                 <h1 className="p-8">Ajay Ganesh</h1>
             </div>
