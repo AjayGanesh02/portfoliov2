@@ -26,10 +26,10 @@ export default function Home({ Projects }: { Projects: Project[] }) {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   try {
       const client = await clientPromise
-      const projects = await client.db('Portfolio').collection('Projects').find({}).project({name: 1, tags: 1, _id: 0}).toArray()
+      const projects = await client.db('Portfolio').collection('Projects').find({}).project({name: 1, tags: 1, link: 1, img: 1, blurb: 1, _id: 0}).toArray()
       return {
           props: {Projects: projects}
       }
