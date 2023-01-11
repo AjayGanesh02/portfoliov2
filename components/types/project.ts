@@ -1,5 +1,6 @@
 export interface Project {
     name: string,
-    image: string,
-    tags: string[]
+    img: string,
+    tags: string[],
+    blurb: string
 }
