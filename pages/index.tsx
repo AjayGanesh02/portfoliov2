@@ -1,11 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import ProjectContainer from '../components/projectContainer'
 import AboutMe from '../components/aboutme'
 import clientPromise from '../lib/mongodb'
 import { Project } from '../components/types/project'
-import { EJSON } from 'bson';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,7 +29,8 @@ export async function getStaticProps() {
       const client = await clientPromise
       const projects = await client.db('Portfolio').collection('Projects').find({}).project({name: 1, tags: 1, link: 1, img: 1, blurb: 1, _id: 0}).toArray()
       return {
-          props: {Projects: projects}
+          props: {Projects: projects},
+          revalidate: 60
       }
 
   } catch (e) {
