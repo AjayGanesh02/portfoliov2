@@ -1,5 +1,5 @@
 import ProjectCard from "./projectCard";
-import { Project } from "./types/project";
+import { Project } from "../types/project";
 
 export default function ProjectContainer({Projects}: {Projects: Project[] }) {
     return (

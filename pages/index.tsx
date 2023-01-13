@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
-import ProjectContainer from '../components/projectContainer'
+import ProjectContainer from '../components/projects/projectContainer'
 import AboutMe from '../components/aboutme'
 import clientPromise from '../lib/mongodb'
 import { Project } from '../components/types/project'
