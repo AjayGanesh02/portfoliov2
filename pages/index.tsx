@@ -17,7 +17,8 @@ export default function Home({ Projects }: { Projects: Project[] }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <AboutMe/>
+        <AboutMe />
+        <div className='divider'></div>
         <ProjectContainer Projects={Projects}/>
       </main>
     </>

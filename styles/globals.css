@@ -125,4 +125,8 @@ a {
     transition-all duration-100 scale-0 origin-left;
   }
 
+  .divider {
+    @apply h-20
+  }
+
 }
