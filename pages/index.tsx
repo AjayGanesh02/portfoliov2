@@ -1,11 +1,11 @@
-import Head from 'next/head'
-import { Inter } from '@next/font/google'
-import ProjectContainer from '../components/projects/projectContainer'
-import AboutMe from '../components/aboutme'
-import clientPromise from '../lib/mongodb'
-import { Project } from '../components/types/project'
+import Head from "next/head";
+import { Inter } from "@next/font/google";
+import ProjectContainer from "../components/projects/projectContainer";
+import AboutMe from "../components/aboutme";
+import clientPromise from "../lib/mongodb";
+import { Project } from "../components/types/project";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ Projects }: { Projects: Project[] }) {
   return (
@@ -18,35 +18,38 @@ export default function Home({ Projects }: { Projects: Project[] }) {
       </Head>
       <main>
         <AboutMe />
-        <div className='divider'></div>
-        <ProjectContainer Projects={Projects}/>
+        <div className="divider"></div>
+        <ProjectContainer Projects={Projects} />
       </main>
     </>
-  )
+  );
 }
 
 export async function getStaticProps() {
   try {
-      const client = await clientPromise
-      const projects = await client.db('Portfolio').collection('Projects').find({}).project(
-        {
-          name: 1, 
-          tags: 1, 
-          link: 1, 
-          img: 1, 
-          blurb: 1,
-          visit: 1, 
-          _id: 0
-        }).toArray()
-      return {
-          props: {Projects: projects},
-          revalidate: 60
-      }
-
+    const client = await clientPromise;
+    const projects = await client
+      .db("Portfolio")
+      .collection("Projects")
+      .find({})
+      .project({
+        name: 1,
+        tags: 1,
+        link: 1,
+        img: 1,
+        blurb: 1,
+        visit: 1,
+        _id: 0,
+      })
+      .toArray();
+    return {
+      props: { Projects: projects },
+      revalidate: 60,
+    };
   } catch (e) {
-      console.error(e)
-      return {
-          props: {Projects: []}
-      }
-  } 
+    console.error(e);
+    return {
+      props: { Projects: [] },
+    };
+  }
 }
