@@ -21,11 +21,11 @@ export const navLinks = [
         path: "/#projects",
         icon: <FaCode size={"1.5em"}/>,
     },
-    {
-      name: "Blog",
-      path: "/blog",
-      icon: <BsFillPencilFill size={"1.5em"}/>
-    },
+    // {
+    //   name: "Blog",
+    //   path: "/blog",
+    //   icon: <BsFillPencilFill size={"1.5em"}/>
+    // },
     {
       name: "Contact Me",
       path: "#contact",
