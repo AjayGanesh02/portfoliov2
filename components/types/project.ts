@@ -3,5 +3,6 @@ export interface Project {
     img: string,
     tags: string[],
     blurb: string,
-    visit?: string
+    visit?: string,
+    mdDesc: string
 }

@@ -27,9 +27,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       </ul>
       <div className="m-2 grid h-1/3 basis-1/6 grid-cols-2 items-center">
         <div className="h-fit w-12 rounded border border-sky-500 text-center shadow-md">
-           <Link href={"/projects/" + project.name}>
-                        Info
-                    </Link> 
+          <Link href={"/projects/" + project.name}>Info</Link>
         </div>
         {project.visit && (
           <div className="h-fit w-12 rounded border border-sky-500 text-center shadow-md">
