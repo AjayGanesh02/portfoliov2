@@ -16,7 +16,7 @@ export default function Home({ Projects }: { Projects: Project[] }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className="flex flex-col w-full h-full md:w-2/3 items-center content-center">
         <AboutMe />
         <div className="divider"></div>
         <ProjectContainer Projects={Projects} />
@@ -37,7 +37,6 @@ export async function getStaticProps() {
         tags: 1,
         link: 1,
         img: 1,
-        blurb: 1,
         visit: 1,
         _id: 0,
       })

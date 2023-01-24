@@ -8,7 +8,9 @@ export default function ProjectContainer({
 }) {
   return (
     <div className="">
-      <h2 className="text-2xl">/projects</h2>
+      <div className="flex items-center justify-center text-center md:mr-20">
+        <h2 className="text-2xl">/projects</h2>
+      </div>
       <div>
         <div className="projects relative z-0 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
           {Projects.map((proj, idx) => (
