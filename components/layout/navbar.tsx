@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <div
       className="fixed top-0 left-0 z-10 m-0 flex h-16 w-full flex-row
-                        justify-center bg-gray-700 text-center
+                        justify-center bg-gray-700 md:bg-inherit text-center
                         text-white shadow-md md:h-full md:w-16 md:flex-col"
     >
       {navLinks.map((link) => (

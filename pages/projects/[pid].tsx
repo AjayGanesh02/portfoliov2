@@ -8,16 +8,19 @@ export default function ProjectInfo({ project }: { project: Project }) {
   return (
     <div>
       <div className="flex flex-col items-center">
-        <h1>{project.name}</h1>
-        <h3>{project.blurb}</h3>
-        <Image
-          src={project.img}
-          alt={project.name}
-          height={1000}
-          width={1000}
-        />
+        <h1 className="pb-4 text-4xl">{project.name}</h1>
+        <div className="pb-4">
+          <Image
+            src={project.img}
+            alt={project.name}
+            height={1000}
+            width={1000}
+          />
+        </div>
+        <h3 className="pb-4">{project.blurb}</h3>
       </div>
-      <div className="px-4 pt-20">
+      <div className="px-8 pt-8 pb-12">
+        <h3 className="text-xl text-center pb-4">Description</h3>
         <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
           {project.mdDesc}
         </ReactMarkdown>
