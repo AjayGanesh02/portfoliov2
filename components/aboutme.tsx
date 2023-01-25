@@ -1,8 +1,15 @@
+import TypeIt from "typeit-react";
 export default function AboutMe() {
+
   return (
-    <div className="about flex flex-col items-center justify-center text-center">
-      <div className="">
-        <h1 className="text-5xl pb-8">Ajay Ganesh</h1>
+    <div className="about justify-center text-center">
+      <div className="pb-4">
+        <h1 className="text-5xl pb-4">Ajay Ganesh</h1>
+        <TypeIt options={{
+          strings: ["University of Michigan CS Student", "Software Engineer", "Fullstack Developer", "Mobile Developer"],
+          breakLines: false,
+          loop: true
+        }}/>
       </div>
       <p>
         Hello! I&apos;m a junior at the University of Michigan studying Computer

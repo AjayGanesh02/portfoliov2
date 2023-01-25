@@ -16,10 +16,12 @@ export default function Home({ Projects }: { Projects: Project[] }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex flex-col w-full h-full md:w-2/3 items-center content-center">
+      <main className="flex flex-col items-center content-center">
+        <div className="w-full h-full md:w-2/3 p-8">
         <AboutMe />
         <div className="divider"></div>
         <ProjectContainer Projects={Projects} />
+        </div>
       </main>
     </>
   );
