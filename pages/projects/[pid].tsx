@@ -6,8 +6,9 @@ import rehypeHighlight from "rehype-highlight";
 
 export default function ProjectInfo({ project }: { project: Project }) {
   return (
-    <div>
-      <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center content-center ">
+      <div className="md:w-2/3 p-8">
+      <div className="flex flex-col items-center ">
         <h1 className="pb-4 text-4xl">{project.name}</h1>
         <div className="pb-4">
           <Image
@@ -26,6 +27,7 @@ export default function ProjectInfo({ project }: { project: Project }) {
         </ReactMarkdown>
       </div>
     </div>
+      </div>
   );
 }
 
