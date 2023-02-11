@@ -4,6 +4,7 @@ import ProjectContainer from "../components/projects/projectContainer";
 import AboutMe from "../components/aboutme";
 import clientPromise from "../lib/mongodb";
 import { Project } from "../components/types/project";
+import ExperienceContainer from "../components/experience/experienceContainer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,9 @@ export default function Home({ Projects }: { Projects: Project[] }) {
         <AboutMe />
         <div className="divider"></div>
         <ProjectContainer Projects={Projects} />
+        <div className="divider"></div>
+        <ExperienceContainer Experiences={[]}/>
+        <div className="divider"/>        
         </div>
       </main>
     </>

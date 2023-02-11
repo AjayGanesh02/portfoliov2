@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="z-0 my-6 flex h-80 w-72 flex-col rounded-lg border border-white bg-gradient-to-r from-zinc-500 to-stone-500 p-1 text-center shadow-lg shadow-zinc-800/10 duration-300 hover:scale-[103%] hover:shadow-xl hover:shadow-zinc-800/10 dark:shadow-zinc-200/10 dark:hover:shadow-zinc-200/10">
+    <div className="z-0 my-6 flex h-80 w-72 flex-col rounded-lg border border-white bg-gradient-to-r from-zinc-600 to-zinc-500 p-1 text-center shadow-lg shadow-zinc-800/10 duration-300 hover:scale-[103%] hover:shadow-xl hover:shadow-zinc-800/10 dark:shadow-zinc-200/10 dark:hover:shadow-zinc-200/10">
       <div className="flex basis-1/6 items-center justify-center">
         <h2 className="text-lg">{project.name}</h2>
       </div>
