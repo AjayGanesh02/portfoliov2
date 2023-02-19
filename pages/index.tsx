@@ -8,7 +8,7 @@ import ExperienceContainer from "../components/experience/experienceContainer";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home({ Projects }: { Projects: Project[] }) {
+export default function Home({ Projects, Experiences }: { Projects: Project[], Experiences: Project[] }) {
   return (
     <>
       <Head>
@@ -23,7 +23,7 @@ export default function Home({ Projects }: { Projects: Project[] }) {
         <div className="divider"></div>
         <ProjectContainer Projects={Projects} />
         <div className="divider"></div>
-        <ExperienceContainer Experiences={[]}/>
+        <ExperienceContainer Experiences={Experiences}/>
         <div className="divider"/>        
         </div>
       </main>
@@ -37,7 +37,25 @@ export async function getStaticProps() {
     const projects = await client
       .db("Portfolio")
       .collection("Projects")
-      .find({})
+      .find({
+        experience: false
+      })
+      .project({
+        name: 1,
+        tags: 1,
+        link: 1,
+        img: 1,
+        visit: 1,
+        _id: 0,
+      })
+      .toArray();
+    
+    const experiences = await client
+      .db("Portfolio")
+      .collection("Projects")
+      .find({
+        experience: true
+      })
       .project({
         name: 1,
         tags: 1,
@@ -48,13 +66,13 @@ export async function getStaticProps() {
       })
       .toArray();
     return {
-      props: { Projects: projects },
+      props: { Projects: projects, Experiences: experiences },
       revalidate: 60,
     };
   } catch (e) {
     console.error(e);
     return {
-      props: { Projects: [] },
+      props: { Projects: [], Experiences: [] },
     };
   }
 }
