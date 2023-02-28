@@ -9,8 +9,14 @@ a {
 
 html {
   color-scheme: dark;
+  background-color: rgb(31 41 55);
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 
 @layer components {

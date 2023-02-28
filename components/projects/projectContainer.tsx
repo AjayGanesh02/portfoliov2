@@ -20,7 +20,7 @@ export default function ProjectContainer({
         <p>Filter by:</p>
         {topics.map((topic, idx) => (
           <button
-            className="m-2 rounded-md border p-1 hover-state"
+            className="m-2 rounded-md border p-1 hover-state border-blue-400 shadow-md hover:shadow-lg"
             onClick={() => {
               setCurTopic(topic);
             }}
