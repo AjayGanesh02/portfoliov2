@@ -12,12 +12,12 @@ export default function ProjectCard({ project }: { project: Project }) {
       <div className="relative basis-1/2 overflow-hidden rounded-lg object-cover">
         <Image src={project.img} alt={project.name} fill={true} />
       </div>
-      <div className="m-2 grid h-1/3 basis-1/3 grid-cols-2 items-center">
-        <div className="h-fit w-12 rounded border border-sky-500 text-center shadow-md">
+      <div className="m-2 flex basis-1/3 items-center justify-center gap-20">
+        <div className="hover-state flex h-14 w-20 items-center justify-center rounded border border-sky-500 text-center">
           <Link href={"/projects/" + project.name}>Info</Link>
         </div>
         {project.visit && (
-          <div className="h-fit w-12 rounded border border-sky-500 text-center shadow-md">
+          <div className="hover-state flex h-14 w-20 items-center justify-center rounded border border-sky-500 text-center">
             <Link href={project.visit}>Visit</Link>
           </div>
         )}
