@@ -4,5 +4,6 @@ export interface Project {
     tags: string[],
     blurb: string,
     visit?: string,
-    mdDesc: string
+    mdDesc: string,
+    experience: boolean
 }

@@ -19,12 +19,12 @@ export default function ProjectInfo({ project }: { project: Project }) {
         </div>
         <h3 className="pb-4 text-gray-400">{project.blurb}</h3>
       </div>
-      <div className="flex flex-row flex-wrap gap-6 justify-center items-center">
+      {!project.experience && <div className="flex flex-row flex-wrap gap-6 justify-center items-center">
         <h1>Tags:</h1>
         {project.tags.map((tag, idx) => (
           <div className="border rounded-md p-2" key={idx}>{tag}</div>
         ))}
-      </div>
+      </div>}
       <div className="px-8 pt-8 pb-12">
         <h3 className="pb-4 text-center text-xl">Description</h3>
         <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
@@ -54,6 +54,7 @@ export async function getStaticProps({ params }: Params) {
         img: 1,
         mdDesc: 1,
         tags: 1,
+        experience: 1,
         _id: 0,
       })
       .toArray();
