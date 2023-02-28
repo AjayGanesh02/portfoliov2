@@ -1,12 +1,16 @@
 import Head from "next/head";
 import ProjectContainer from "../components/projects/projectContainer";
-import AboutMe from "../components/aboutme";
 import clientPromise from "../lib/mongodb";
 import { Project } from "../components/types/project";
 import ExperienceContainer from "../components/experience/experienceContainer";
 
-
-export default function Home({ Projects, Experiences }: { Projects: Project[], Experiences: Project[] }) {
+export default function Home({
+  Projects,
+  Experiences,
+}: {
+  Projects: Project[];
+  Experiences: Project[];
+}) {
   return (
     <>
       <Head>
@@ -15,16 +19,18 @@ export default function Home({ Projects, Experiences }: { Projects: Project[], E
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex flex-col items-center content-center">
-        <div className="w-full h-full md:w-2/3 p-8">
-        <AboutMe />
-        <div className="divider"></div>
-        <ExperienceContainer Experiences={Experiences}/>
-        <div className="divider"></div>
-        <ProjectContainer Projects={Projects} />
-        <div className="divider"/>        
-        </div>
-      </main>
+      <p>
+        Hello! I&apos;m a junior at the University of Michigan studying Computer
+        Science. I&apos;m super passionate about Software Engineering, and
+        I&apos;d love to share that passion with you! On this site, you can find
+        projects that I&apos;ve worked on and code that I&apos;m experimenting
+        with.
+      </p>
+      <div className="divider"></div>
+      <ExperienceContainer Experiences={Experiences} />
+      <div className="divider"></div>
+      <ProjectContainer Projects={Projects} />
+      <div className="divider" />
     </>
   );
 }
@@ -36,7 +42,7 @@ export async function getStaticProps() {
       .db("Portfolio")
       .collection("Projects")
       .find({
-        experience: false
+        experience: false,
       })
       .project({
         name: 1,
@@ -47,12 +53,12 @@ export async function getStaticProps() {
         _id: 0,
       })
       .toArray();
-    
+
     const experiences = await client
       .db("Portfolio")
       .collection("Projects")
       .find({
-        experience: true
+        experience: true,
       })
       .project({
         name: 1,
