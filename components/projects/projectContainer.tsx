@@ -19,13 +19,14 @@ export default function ProjectContainer({
       <div className="my-6 flex items-center justify-center text-center">
         <p>Filter by:</p>
         {topics.map((topic, idx) => (
-          <button className="border rounded-md m-2 p-1"
+          <button
+            className="m-2 rounded-md border p-1 hover-state"
             onClick={() => {
               setCurTopic(topic);
             }}
             key={idx}
           >
-            {topic === "" ? "Reset":topic}
+            {topic === "" ? "Reset" : topic}
           </button>
         ))}
       </div>

@@ -26,4 +26,8 @@ html {
     @apply h-20
   }
 
+  .hover-state {
+    @apply shadow-lg shadow-zinc-800/10 duration-300 hover:scale-[103%] hover:shadow-xl hover:shadow-zinc-800/10 dark:shadow-zinc-200/10 dark:hover:shadow-zinc-200/10;
+  }
+
 }
