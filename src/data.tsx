@@ -1,7 +1,6 @@
 import { FaCode } from "react-icons/fa"
-import { SiAboutdotme } from "react-icons/si"
-import { MdContactPage } from "react-icons/md"
-import { BsFillPencilFill } from "react-icons/bs"
+import { MdContactPage, MdWork } from "react-icons/md";
+// import { BsFillPencilFill } from "react-icons/bs"
 import { IoMdContact } from "react-icons/io"
 import { AiFillHome, AiFillLinkedin, AiFillGithub } from "react-icons/ai"
 
@@ -12,9 +11,9 @@ export const navLinks = [
      icon: <AiFillHome size={"1.5em"}/>
     },
     {
-      name: "About Me",
-      path: "/#about",
-      icon: <SiAboutdotme size={"1.5em"}/>
+      name: "Experience",
+      path: "/#experience",
+      icon: <MdWork size={"1.5em"}/>
     },
     {
         name: "Projects",
