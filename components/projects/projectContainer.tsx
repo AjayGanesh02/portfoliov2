@@ -11,7 +11,8 @@ export default function ProjectContainer({
 }) {
   const [curTopic, setCurTopic] = useState("");
   return (
-    <div className="">
+    <div>
+      <a id="projects"></a>
       <div className="flex items-center justify-center text-center">
         <h2 className="text-2xl">/projects</h2>
       </div>
