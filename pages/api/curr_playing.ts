@@ -9,5 +9,7 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
+  const access = req.query.access_token;
+
   res.status(200).json({ name: "John Doe" });
 }
