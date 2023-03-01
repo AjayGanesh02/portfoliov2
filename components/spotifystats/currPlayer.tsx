@@ -14,8 +14,8 @@ export default function CurrPlayer({ token }: { token: string }) {
     <div className="flex flex-col items-center justify-center gap-4">
       <h1 className="text-xl">Currently Playing:</h1>
       <div className="flex w-3/5 flex-col gap-20 rounded-md border p-10">
-        <div className="flex flex-col items-center justify-center gap-20 md:flex-row">
-          <div className="basis-1/2 flex items-center justify-center">
+        <div className="flex flex-col items-center justify-center gap-20 lg:flex-row">
+          <div className="flex basis-1/2 items-center justify-center">
             <div className="hover-state relative h-40 w-40 overflow-hidden rounded-md object-cover">
               <Link href={data?.urls?.spotify || ""}>
                 <Image
@@ -26,7 +26,7 @@ export default function CurrPlayer({ token }: { token: string }) {
               </Link>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center gap-4 text-center basis-1/2">
+          <div className="flex basis-1/2 flex-col items-center justify-center gap-4 text-center">
             <Link href={data?.urls?.spotify || ""}>
               <h2 className="text-lg">
                 {data?.name || "Nothing currently playing"}
