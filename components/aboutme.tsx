@@ -1,7 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import TypeIt from "typeit-react";
 export default function AboutMe() {
+  const [clicks, setClicks] = useState(0);
+  useEffect(() => {
+    if (clicks == 5) {
+      console.log("running");
+      fetch("/api/lights");
+      setClicks(clicks + 1);
+    }
+  }, [clicks]);
   return (
     <div className="about justify-center text-center">
       <div className="pb-4">
@@ -22,8 +31,13 @@ export default function AboutMe() {
               />
             </div>
           </Link>
-          <div className="flex flex-col content-center items-center gap-4 text-center">
-            <h1 className="text-5xl">Ajay Ganesh</h1>
+          <div className="flex flex-col items-center justify-center gap-4 text-center">
+            <div
+              className="flex items-center justify-center"
+              onClick={() => setClicks(clicks + 1)}
+            >
+              <h1 className="text-5xl">Ajay Ganesh</h1>
+            </div>
             <p className="text-gray-500">he/him/his</p>
             <TypeIt
               options={{
