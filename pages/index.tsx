@@ -71,7 +71,7 @@ export async function getStaticProps() {
       .toArray();
     return {
       props: { Projects: projects, Experiences: experiences },
-      revalidate: 60,
+      revalidate: 3600,
     };
   } catch (e) {
     console.error(e);

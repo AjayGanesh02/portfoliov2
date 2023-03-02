@@ -66,7 +66,7 @@ export async function getStaticProps({ params }: Params) {
       .toArray();
     return {
       props: { project: project[0] },
-      revalidate: 60,
+      revalidate: 3600,
     };
   } catch (e) {
     console.error(e);
