@@ -11,9 +11,9 @@ export default function CurrPlayer({ token }: { token: string }) {
   );
   if (error) return <div>error</div>;
   return (
-    <div className="flex flex-col items-center justify-center gap-4">
+    <div className="flex w-full flex-col items-center justify-center gap-4">
       <h1 className="text-xl">Currently Playing:</h1>
-      <div className="flex w-3/5 flex-col gap-20 rounded-md border p-10">
+      <div className="flex w-3/5 flex-col gap-20 rounded-md border p-8">
         <div className="flex flex-col items-center justify-center gap-20 lg:flex-row">
           <div className="flex basis-1/2 items-center justify-center">
             <div className="hover-state relative h-40 w-40 overflow-hidden rounded-md object-cover">
@@ -57,13 +57,6 @@ export default function CurrPlayer({ token }: { token: string }) {
             </div>
           </div>
         )}
-      </div>
-      <div>
-        <p>
-          I love sharing what I&apos;ve been listening to recently, so I decided
-          to use the Spotify API to build this tracker that shows my currently
-          listening song.
-        </p>
       </div>
     </div>
   );

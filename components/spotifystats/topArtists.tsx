@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function TopArtists({ top_artists }: { top_artists: any[] }) {
   return (
-    <div className="flex flex-col gap-6 w-full">
+    <div className="flex w-full flex-col gap-6">
       <h1 className="text-center text-lg">Top Artists</h1>
       <div>
         {top_artists.map((artist, idx) => {

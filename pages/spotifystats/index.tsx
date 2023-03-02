@@ -14,7 +14,14 @@ export default function SpotifyStats({
   top_songs: any[];
 }) {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center gap-6">
+      <div className="flex items-center justify-center text-center">
+        <p>
+          I love sharing what I&apos;ve been listening to recently, so I decided
+          to use the Spotify API to build this tracker that shows my currently
+          listening song and my top songs and artists of the past few months!
+        </p>
+      </div>
       <CurrPlayer token={token} />
       <div className="flex w-full flex-col lg:flex-row">
         <div className="flex basis-1/2 items-center justify-center">
