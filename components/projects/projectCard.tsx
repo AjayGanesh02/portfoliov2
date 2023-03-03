@@ -6,13 +6,23 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="hover-state z-0 my-6 flex h-80 w-72 flex-col rounded-lg border border-white bg-gradient-to-r from-zinc-600 to-zinc-500 p-1 text-center">
       <Link href={"/projects/" + project.name}>
-        <div className="flex basis-1/6 items-center justify-center">
+        <div className="flex items-center justify-center">
           <h2 className="text-lg">{project.name}</h2>
         </div>
       </Link>
-      <div className="relative basis-1/2 overflow-hidden rounded-lg object-cover">
+      <div className="basis-1/2">
         <Link href={"/projects/" + project.name}>
-          <Image src={project.img} alt={project.name} fill={true} />
+          <div className="relative h-full w-full overflow-hidden rounded-lg object-cover">
+            <Image
+              src={project.img}
+              alt={project.name}
+              fill={true}
+              sizes="
+              (max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+            />
+          </div>
         </Link>
       </div>
       <div className="m-2 flex basis-1/3 items-center justify-center gap-20">

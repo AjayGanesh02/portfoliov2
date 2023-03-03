@@ -16,15 +16,16 @@ export default function CurrPlayer({ token }: { token: string }) {
       <div className="flex w-3/5 flex-col gap-20 rounded-md border p-8">
         <div className="flex flex-col items-center justify-center gap-20 lg:flex-row">
           <div className="flex basis-1/2 items-center justify-center">
-            <div className="hover-state relative h-40 w-40 overflow-hidden rounded-md object-cover">
-              <Link href={data?.urls?.spotify || ""}>
+            <Link href={data?.urls?.spotify || ""}>
+              <div className="hover-state relative h-40 w-40 overflow-hidden rounded-md object-cover">
                 <Image
                   src={data?.album?.images[0].url || emptyImage}
                   alt="album"
                   fill={true}
+                  sizes="20vw"
                 />
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
           <div className="flex basis-1/2 flex-col items-center justify-center gap-4 text-center">
             <Link href={data?.urls?.spotify || ""}>

@@ -10,15 +10,16 @@ export default function TopSongs({ top_songs }: { top_songs: any[] }) {
           return (
             <div key={idx} className="flex h-28 flex-row">
               <div className="flex basis-1/3 items-center justify-center">
-                <div className="hover-state relative flex h-20 w-20 items-center justify-center overflow-hidden rounded-md">
-                  <Link href={song.external_urls.spotify}>
+                <Link href={song.external_urls.spotify}>
+                  <div className="hover-state relative flex h-20 w-20 items-center justify-center overflow-hidden rounded-md">
                     <Image
                       src={song.album.images[0].url}
                       alt={song.name}
                       fill={true}
+                      sizes="10vw"
                     />
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               </div>
               <div className="flex basis-2/3 flex-col items-center justify-center text-center">
                 <Link href={song.external_urls.spotify}>

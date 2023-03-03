@@ -28,6 +28,7 @@ export default function AboutMe() {
                 alt="Pro Headshot"
                 fill={true}
                 className="object-cover"
+                sizes="15vw"
               />
             </div>
           </Link>
