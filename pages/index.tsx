@@ -43,6 +43,8 @@ export async function getStaticProps() {
       .collection("Projects")
       .find({
         experience: false,
+      }).sort({
+        order: -1
       })
       .project({
         name: 1,
