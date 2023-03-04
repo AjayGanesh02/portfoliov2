@@ -1,8 +1,8 @@
 import axios from "axios";
 import queryString from "query-string";
 import CurrPlayer from "../../components/spotifystats/currPlayer";
-import TopArtists from "../../components/spotifystats/topArtists";
-import TopSongs from "../../components/spotifystats/topSongs";
+import TopContainer from "../../components/spotifystats/topContainer";
+import { TermDict } from "../../components/types/termdict";
 
 export default function SpotifyStats({
   token,
@@ -10,8 +10,8 @@ export default function SpotifyStats({
   top_songs,
 }: {
   token: string;
-  top_artists: any[];
-  top_songs: any[];
+  top_artists: TermDict;
+  top_songs: TermDict;
 }) {
   return (
     <div className="flex flex-col items-center justify-center gap-6">
@@ -23,14 +23,7 @@ export default function SpotifyStats({
         </p>
       </div>
       <CurrPlayer token={token} />
-      <div className="flex w-full flex-col lg:flex-row">
-        <div className="flex basis-1/2 items-center justify-center">
-          <TopSongs top_songs={top_songs} />
-        </div>
-        <div className="flex basis-1/2 items-center justify-center">
-          <TopArtists top_artists={top_artists} />
-        </div>
-      </div>
+      <TopContainer songs={top_songs} artists={top_artists} token={token} />
     </div>
   );
 }
@@ -55,51 +48,64 @@ export async function getServerSideProps() {
 
   const access_token = resp?.data?.access_token || "";
 
-  const url = "https://api.spotify.com/v1/me/top/tracks?time_range=medium_term";
+  const urls = [
+    "https://api.spotify.com/v1/me/top/tracks?time_range=short_term",
+    "https://api.spotify.com/v1/me/top/tracks?time_range=medium_term",
+    "https://api.spotify.com/v1/me/top/tracks?time_range=long_term",
+    "https://api.spotify.com/v1/me/top/artists?time_range=short_term",
+    "https://api.spotify.com/v1/me/top/artists?time_range=medium_term",
+    "https://api.spotify.com/v1/me/top/artists?time_range=long_term",
+  ];
 
-  const resp2 = await axios.get(url, {
-    headers: {
-      Authorization: "Bearer " + access_token,
-      "Content-Type": "application/json",
-    },
-  });
-  resp2.data.items.forEach((track: any) => {
-    delete track.available_markets;
-    delete track.disc_number;
-    delete track.external_ids;
-    delete track.id;
-    delete track.explicit;
-    delete track.is_local;
-    delete track.type;
-    delete track.uri;
-    delete track.album.available_markets;
-    delete track.album.release_date;
-    delete track.album.release_date_precision;
-    delete track.album.total_tracks;
+  const requests = urls.map((url) => {
+    return axios.get(url, {
+      headers: {
+        Authorization: "Bearer " + access_token,
+        "Content-Type": "application/json",
+      },
+    });
   });
 
-  const url2 =
-    "https://api.spotify.com/v1/me/top/artists?time_range=medium_term";
-
-  const resp3 = await axios.get(url2, {
-    headers: {
-      Authorization: "Bearer " + access_token,
-      "Content-Type": "application/json",
-    },
+  const responses = await axios.all<any>(requests);
+  responses.forEach((response: any, idx: number) => {
+    if (idx < 3) {
+      response?.data.items.forEach((track: any) => {
+        delete track.available_markets;
+        delete track.disc_number;
+        delete track.external_ids;
+        delete track.id;
+        delete track.explicit;
+        delete track.is_local;
+        delete track.type;
+        delete track.uri;
+        delete track.album.available_markets;
+        delete track.album.release_date;
+        delete track.album.release_date_precision;
+        delete track.album.total_tracks;
+      });
+    } else {
+      response?.data.items.forEach((artist: any) => {
+        delete artist.followers;
+        delete artist.id;
+        delete artist.type;
+        delete artist.uri;
+        delete artist.popularity;
+      });
+    }
   });
-  resp3.data.items.forEach((artist: any) => {
-    delete artist.followers;
-    delete artist.id;
-    delete artist.type;
-    delete artist.uri;
-    delete artist.popularity;
-  });
-
   return {
     props: {
       token: access_token,
-      top_songs: resp2.data.items,
-      top_artists: resp3.data.items,
+      top_songs: {
+        short: responses[0]?.data.items || [],
+        medium: responses[1]?.data.items || [],
+        long: responses[2]?.data.items || [],
+      },
+      top_artists: {
+        short: responses[3]?.data.items || [],
+        medium: responses[4]?.data.items || [],
+        long: responses[5]?.data.items || [],
+      },
     },
   };
 }
