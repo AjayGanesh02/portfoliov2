@@ -14,7 +14,7 @@ export default function SpotifyStats({
   top_songs: TermDict;
 }) {
   return (
-    <div className="flex flex-col items-center justify-center gap-6">
+    <div className="flex flex-col items-center justify-center gap-8">
       <div className="flex items-center justify-center text-center">
         <p>
           I love sharing what I&apos;ve been listening to recently, so I decided

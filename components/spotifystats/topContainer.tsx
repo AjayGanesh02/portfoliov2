@@ -14,7 +14,7 @@ export default function TopContainer({
 }) {
   const [term, setTerm] = useState("medium");
   return (
-    <div className="flex w-full flex-col">
+    <div className="flex w-full flex-col gap-6">
       <div className="flex flex-row items-center justify-center gap-6">
         Term:
         <div
