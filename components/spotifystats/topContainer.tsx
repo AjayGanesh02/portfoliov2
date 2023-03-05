@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 import { TermDict } from "../types/termdict";
 import TopArtists from "./topArtists";
 import TopSongs from "./topSongs";
@@ -18,19 +18,28 @@ export default function TopContainer({
       <div className="flex flex-row items-center justify-center gap-6">
         Term:
         <div
-          className="hover-state rounded-md border p-2"
+          className={
+            "hover-state rounded-md border p-2 " +
+            (term == "short" ? "border-red-700" : "")
+          }
           onClick={() => setTerm("short")}
         >
           short
         </div>
         <div
-          className="hover-state rounded-md border p-2"
+          className={
+            "hover-state rounded-md border p-2 " +
+            (term == "medium" ? "border-red-700" : "")
+          }
           onClick={() => setTerm("medium")}
         >
           medium
         </div>
         <div
-          className="hover-state rounded-md border p-2"
+          className={
+            "hover-state rounded-md border p-2 " +
+            (term == "long" ? "border-red-700" : "")
+          }
           onClick={() => setTerm("long")}
         >
           long

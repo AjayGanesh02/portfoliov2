@@ -21,7 +21,10 @@ export default function ProjectContainer({
         <div className="flex flex-row items-center justify-center">
           {topics.map((topic, idx) => (
             <button
-              className="hover-state m-2 rounded-md border border-blue-400 p-1 shadow-md hover:shadow-lg"
+              className={
+                "hover-state m-2 rounded-md border border-blue-400 p-1 shadow-md hover:shadow-lg" +
+                (curTopic == topic && topic ? " border-red-700" : "")
+              }
               onClick={() => {
                 setCurTopic(topic);
               }}
