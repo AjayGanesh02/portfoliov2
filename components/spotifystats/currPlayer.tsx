@@ -19,7 +19,7 @@ export default function CurrPlayer({ token }: { token: string }) {
             <Link href={data?.urls?.spotify || ""}>
               <div className="hover-state relative h-40 w-40 overflow-hidden rounded-md object-cover">
                 <Image
-                  src={data?.album?.images[0].url || emptyImage}
+                  src={data?.album?.images[0]?.url || emptyImage}
                   alt="album"
                   fill={true}
                   sizes="20vw"
@@ -36,7 +36,7 @@ export default function CurrPlayer({ token }: { token: string }) {
             <h3 className="flex flex-col flex-wrap text-gray-400">
               {data?.artists?.map((artist: any, idx: number) => {
                 return (
-                  <Link key={idx} href={artist.external_urls.spotify}>
+                  <Link key={idx} href={artist?.external_urls?.spotify || ""}>
                     {artist.name + " "}
                   </Link>
                 );
