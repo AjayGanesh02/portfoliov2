@@ -19,7 +19,7 @@ export default function TopContainer({
         Term:
         <div
           className={
-            "hover-state rounded-md border p-2 " +
+            "hover-state rounded-md border p-2 shadow-md " +
             (term == "short" ? "border-red-700" : "")
           }
           onClick={() => setTerm("short")}
@@ -28,7 +28,7 @@ export default function TopContainer({
         </div>
         <div
           className={
-            "hover-state rounded-md border p-2 " +
+            "hover-state rounded-md border p-2 shadow-md " +
             (term == "medium" ? "border-red-700" : "")
           }
           onClick={() => setTerm("medium")}
@@ -37,7 +37,7 @@ export default function TopContainer({
         </div>
         <div
           className={
-            "hover-state rounded-md border p-2 " +
+            "hover-state rounded-md border p-2 shadow-md " +
             (term == "long" ? "border-red-700" : "")
           }
           onClick={() => setTerm("long")}

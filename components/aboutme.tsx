@@ -37,9 +37,12 @@ export default function AboutMe() {
               className="flex items-center justify-center"
               onClick={() => setClicks(clicks + 1)}
             >
-              <h1 className="text-5xl">Ajay Ganesh</h1>
+              <h1 className=" text-5xl font-bold">
+                Ajay Ganesh
+              </h1>
             </div>
             <p className="text-gray-500">he/him/his</p>
+            <h1 className="font-semibold">
             <TypeIt
               options={{
                 strings: [
@@ -47,11 +50,13 @@ export default function AboutMe() {
                   "Software Engineer",
                   "Fullstack Developer",
                   "Mobile Developer",
+                  "Security Engineer",
                 ],
                 breakLines: false,
                 loop: true,
               }}
-            />
+              />
+              </h1>
           </div>
         </div>
       </div>
