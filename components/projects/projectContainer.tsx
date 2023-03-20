@@ -14,7 +14,7 @@ export default function ProjectContainer({
     <div>
       <a id="projects"></a>
       <div className="flex items-center justify-center text-center">
-        <h2 className="text-2xl">/projects</h2>
+        <h2 className="headline text-2xl">{"// projects"}</h2>
       </div>
       <div className="my-6 flex flex-col items-center justify-center text-center">
         <p>Filter by:</p>

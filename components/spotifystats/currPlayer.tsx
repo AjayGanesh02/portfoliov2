@@ -12,7 +12,7 @@ export default function CurrPlayer({ token }: { token: string }) {
   if (error) return <div>error</div>;
   return (
     <div className="flex w-full flex-col items-center justify-center gap-4">
-      <h1 className="text-xl">Currently Playing:</h1>
+      <h1 className="text-xl font-bold">Currently Playing:</h1>
       <div className="flex w-3/5 flex-col gap-20 rounded-md border p-8">
         <div className="flex flex-col items-center justify-center gap-20 lg:flex-row">
           <div className="flex basis-1/2 items-center justify-center">
