@@ -32,7 +32,7 @@ const Hero = () => {
       <div className="relative h-64 w-full sm:h-72 md:h-96 lg:relative lg:w-96 lg:h-96 lg:mx-auto mt-8">
         <Image
           className="absolute inset-0 w-full h-full object-cover rounded-xl"
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_4123.JPG-CeEJeJKD2IpMcOTLOoWaAqkmLi5aC9.jpeg"
+          src=""
           alt="Professional headshot"
           width={500}
           height={600}
@@ -43,4 +43,3 @@ const Hero = () => {
 }
 
 export default Hero
-
