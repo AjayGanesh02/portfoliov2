@@ -83,6 +83,7 @@ export async function upsertItem(formData: FormData) {
     imageUrl: str(formData, "imageUrl"),
     tags: str(formData, "tags")?.split(",").map((t) => t.trim()).filter(Boolean) ?? null,
     externalUrl: str(formData, "externalUrl"),
+    repoUrl: str(formData, "repoUrl"),
     dateRange: str(formData, "dateRange"),
     hidden: formData.get("hidden") === "on",
     sortOrder: sortOrderRaw == null ? null : Number(sortOrderRaw),

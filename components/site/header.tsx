@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { SiteName } from "./name";
 import { ThemeToggle } from "./theme-toggle";
+import { AvatarAlbum } from "./avatar-album";
+import type { AlbumImage } from "../../lib/album";
 
 const links = [
   { label: "experience", href: "/#experience" },
@@ -8,10 +10,13 @@ const links = [
   { label: "spotify", href: "/spotify" },
 ];
 
-export function Header() {
+export function Header({ photos }: { photos: AlbumImage[] }) {
   return (
-    <header className="mb-12 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
-      <SiteName />
+    <header className="mb-12 flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
+      <div className="flex items-center gap-3">
+        <AvatarAlbum photos={photos} />
+        <SiteName />
+      </div>
       <nav className="flex items-baseline gap-4 font-mono text-sm text-neutral-500">
         {links.map((l) => (
           <Link

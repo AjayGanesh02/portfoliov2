@@ -10,6 +10,9 @@ const nextConfig = {
         hostname: 'i.scdn.co',
         port: "",
         pathname: "/image/*"
+      }, {
+        protocol: 'https',
+        hostname: '*.public.blob.vercel-storage.com',
       },
     ],
   },

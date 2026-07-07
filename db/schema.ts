@@ -41,6 +41,7 @@ export const items = pgTable(
     imageUrl: text("image_url"),
     tags: text("tags").array(),
     externalUrl: text("external_url"),
+    repoUrl: text("repo_url"),
     dateRange: text("date_range"),
     hidden: boolean("hidden").notNull().default(false),
     sortOrder: integer("sort_order"),

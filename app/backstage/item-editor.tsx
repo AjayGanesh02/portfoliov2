@@ -101,6 +101,7 @@ export function ItemEditor({ item }: { item: ContentItem }) {
             <Field label="date range" name="dateRange" defaultValue={item.dateRange} />
             <Field label="sort order" name="sortOrder" defaultValue={item.sortOrder ?? ""} />
             <Field label="external url" name="externalUrl" defaultValue={item.externalUrl} />
+            <Field label="code url (repo)" name="repoUrl" defaultValue={item.repoUrl} />
             <Field label="image url" name="imageUrl" defaultValue={item.imageUrl} />
           </div>
           <Field label="tags (comma-separated)" name="tags" defaultValue={item.tags?.join(", ")} />
@@ -144,6 +145,7 @@ export function NewItemForm() {
         <Field label="date range" name="dateRange" />
         <Field label="sort order" name="sortOrder" />
         <Field label="external url" name="externalUrl" />
+        <Field label="code url (repo)" name="repoUrl" />
         <Field label="image url" name="imageUrl" />
       </div>
       <Field label="tags (comma-separated)" name="tags" />

@@ -19,6 +19,7 @@ const OVERRIDE_FIELDS = [
   "imageUrl",
   "tags",
   "externalUrl",
+  "repoUrl",
   "dateRange",
 ] as const;
 
@@ -51,7 +52,9 @@ function rowToItem(row: ItemRow): ContentItem {
     externalUrl: row.externalUrl ?? undefined,
     // a github-sourced row still links to its repo even when the repo
     // isn't topic-tagged (or the API call failed)
-    repoUrl: row.source === "github" ? `https://github.com/${row.sourceKey}` : undefined,
+    repoUrl:
+      row.repoUrl ??
+      (row.source === "github" ? `https://github.com/${row.sourceKey}` : undefined),
     dateRange: row.dateRange ?? undefined,
     defaultOrder: 0,
     sortOrder: row.sortOrder,
