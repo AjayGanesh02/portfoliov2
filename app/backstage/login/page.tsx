@@ -7,7 +7,7 @@ export default function LoginPage() {
   const [state, action, pending] = useActionState(login, undefined);
   return (
     <div className="mx-auto max-w-xs pt-16">
-      <h1 className="mb-6 font-mono text-sm text-neutral-500">// backstage</h1>
+      <h1 className="mb-6 font-mono text-sm text-neutral-500">{"// backstage"}</h1>
       <form action={action} className="space-y-3">
         <input
           type="password"

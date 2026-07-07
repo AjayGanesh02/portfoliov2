@@ -13,7 +13,7 @@ export function NowPlaying({ token }: { token: string }) {
   const playing = data?.is_playing;
   return (
     <div className="rounded-md border border-neutral-200 p-4 dark:border-neutral-800">
-      <p className="mb-3 font-mono text-sm text-neutral-500">// now playing</p>
+      <p className="mb-3 font-mono text-sm text-neutral-500">{"// now playing"}</p>
       <div className="flex items-center gap-4">
         <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded border border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900">
           {playing && data?.album?.images?.[0]?.url && (

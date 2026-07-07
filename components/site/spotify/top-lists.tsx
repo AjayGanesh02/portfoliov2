@@ -86,7 +86,7 @@ export function TopLists({
       </div>
       <div className="grid gap-10 sm:grid-cols-2">
         <section>
-          <h2 className="mb-4 font-mono text-sm text-neutral-500">// top songs</h2>
+          <h2 className="mb-4 font-mono text-sm text-neutral-500">{"// top songs"}</h2>
           <ul className="space-y-3">
             {songs[term].map((song, i) => (
               <Row
@@ -103,7 +103,7 @@ export function TopLists({
           </ul>
         </section>
         <section>
-          <h2 className="mb-4 font-mono text-sm text-neutral-500">// top artists</h2>
+          <h2 className="mb-4 font-mono text-sm text-neutral-500">{"// top artists"}</h2>
           <ul className="space-y-3">
             {artists[term].map((artist, i) => (
               <Row

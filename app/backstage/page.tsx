@@ -9,7 +9,9 @@ function Panel({ title, items }: { title: string; items: ContentItem[] }) {
   return (
     <section className="mt-10">
       <h2 className="mb-3 font-mono text-sm text-neutral-500">
-        // {title} <span className="text-neutral-400 dark:text-neutral-600">({items.length})</span>
+        {"// "}
+        {title}{" "}
+        <span className="text-neutral-400 dark:text-neutral-600">({items.length})</span>
       </h2>
       {items.length ? (
         <ul className="space-y-2">
@@ -34,7 +36,7 @@ export default async function BackstagePage() {
   return (
     <div>
       <div className="flex items-baseline justify-between">
-        <h1 className="font-mono text-sm text-neutral-500">// backstage</h1>
+        <h1 className="font-mono text-sm text-neutral-500">{"// backstage"}</h1>
         <form action={logout}>
           <button className="font-mono text-xs text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100">
             logout
@@ -50,7 +52,7 @@ export default async function BackstagePage() {
 
       {warnings.length > 0 && (
         <div className="mt-6 rounded-md border border-amber-400 p-3 text-sm text-amber-700 dark:border-amber-600 dark:text-amber-400">
-          <p className="mb-1 font-mono text-xs">// warnings</p>
+          <p className="mb-1 font-mono text-xs">{"// warnings"}</p>
           <ul className="list-inside list-disc">
             {warnings.map((w, i) => (
               <li key={i}>{w}</li>

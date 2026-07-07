@@ -81,7 +81,7 @@ export function Section({
 }) {
   return (
     <section id={id} className="mt-12 scroll-mt-8">
-      <h2 className="mb-4 font-mono text-sm text-neutral-500">// {title}</h2>
+      <h2 className="mb-4 font-mono text-sm text-neutral-500">{"// "}{title}</h2>
       {children}
     </section>
   );
