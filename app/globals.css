@@ -22,3 +22,64 @@ html {
   background: rgb(255 255 255 / 0.85);
   color: black;
 }
+
+/* Minimal highlight.js theme (rehype-highlight), light + dark */
+.hljs {
+  color: var(--color-neutral-800);
+}
+.dark .hljs {
+  color: var(--color-neutral-200);
+}
+.hljs-comment,
+.hljs-quote {
+  color: var(--color-neutral-500);
+  font-style: italic;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-type {
+  color: var(--color-rose-700);
+}
+.dark .hljs-keyword,
+.dark .hljs-selector-tag,
+.dark .hljs-built_in,
+.dark .hljs-type {
+  color: var(--color-rose-400);
+}
+.hljs-string,
+.hljs-attr,
+.hljs-template-variable,
+.hljs-regexp {
+  color: var(--color-emerald-700);
+}
+.dark .hljs-string,
+.dark .hljs-attr,
+.dark .hljs-template-variable,
+.dark .hljs-regexp {
+  color: var(--color-emerald-400);
+}
+.hljs-number,
+.hljs-literal,
+.hljs-symbol,
+.hljs-meta {
+  color: var(--color-sky-700);
+}
+.dark .hljs-number,
+.dark .hljs-literal,
+.dark .hljs-symbol,
+.dark .hljs-meta {
+  color: var(--color-sky-400);
+}
+.hljs-title,
+.hljs-function .hljs-title,
+.hljs-section,
+.hljs-name {
+  color: var(--color-indigo-700);
+}
+.dark .hljs-title,
+.dark .hljs-function .hljs-title,
+.dark .hljs-section,
+.dark .hljs-name {
+  color: var(--color-indigo-400);
+}
