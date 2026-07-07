@@ -40,3 +40,4 @@ next-env.d.ts
 
 # local content backups
 scripts/mongo-backup.json
+.env*
