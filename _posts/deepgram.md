@@ -1,0 +1,13 @@
+[Deepgram](https://deepgram.com) is a foundational AI startup that I interned at from May 2023 to August 2023. 
+
+My work there was as a backend developer on the console team, which handled the inner workings of the Rust based REST API that exposed functionality such as billing, usage, and authentication. I also worked with TypeScript and Node.js for one of the services that I was working on, worked with infrastructure tooling such as [Hashicorp Nomad](https://www.nomadproject.io/) and [Amazon Web Services](https://aws.amazon.com/).
+
+During my time at Deepgram, I gained a ton of experience working on web APIs, and a much more holistic understanding of the request/response cycle and what it takes to build a web server. I implemented a ton of features and services there, from small to large, and gained experience working with external APIs such as [Twilio](https://twilio.com) and [Stripe](https://stripe.com).
+
+Deepgram was also my first internship where I was truly exposed to the entire software development life cycle. Though I had [interned at CaringWire](https://www.ajayganesh.com/projects/CaringWire%20-%20Software%20Engineering%20Intern) previously, that role was part time, and the size of the team there meant that the structure and rituals of a typical [Agile](https://en.wikipedia.org/wiki/Agile_software_development) team were sometimes neglected. 
+
+Deepgram had a much larger scale, and a much more complex codebase to match. As a result, I became very familiar with navigating large collaborative pieces of code, and was able to put into practice all I had learned about contributing to such codebases, such as extensive code reviews, good style, and general good programming practices. We worked in two week sprints, which focused our scope to a manageable extent, and had refinement sessions to prioritize what we worked on each week.
+
+Something else I appreciated was that a lot of our technical team meetings included a diverse and collaborative group, including roles such as product managers, frontend developers, designers, and coworkers from other teams. This let me visualize the impact that my code had on the company as a whole, and gave me a better understanding of the path an idea takes on the road to being a feature. I also always felt comfortable asking questions and interacting with my coworkers, as they were patient and provided great mentorship.
+
+All in all, I had a great summer at Deepgram, and really came to love the work that I did there!
