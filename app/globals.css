@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* next-themes sets .dark on <html>; make Tailwind's dark: variant follow it */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, "SF Mono", monospace;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+::selection {
+  background: rgb(0 0 0 / 0.85);
+  color: white;
+}
+
+.dark ::selection {
+  background: rgb(255 255 255 / 0.85);
+  color: black;
+}
