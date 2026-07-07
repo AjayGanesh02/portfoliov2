@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import TypeIt from "typeit-react";
 export default function AboutMe() {
   const [clicks, setClicks] = useState(0);
   useEffect(() => {
@@ -40,21 +39,7 @@ export default function AboutMe() {
               <h1 className="headline text-5xl">Ajay Ganesh</h1>
             </div>
             <p className="text-gray-500">he/him/his</p>
-            <h1 className="headline font-semibold">
-              <TypeIt
-                options={{
-                  strings: [
-                    "University of Michigan CS Student",
-                    "Software Engineer",
-                    "Fullstack Developer",
-                    "Mobile Developer",
-                    "Security Engineer",
-                  ],
-                  breakLines: false,
-                  loop: true,
-                }}
-              />
-            </h1>
+            <h1 className="headline font-semibold">Software Engineer</h1>
           </div>
         </div>
       </div>
