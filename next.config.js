@@ -14,7 +14,15 @@ const nextConfig = {
     ],
   },
   reactStrictMode: true,
-
+  async redirects() {
+    return [
+      {
+        source: '/spotifystats',
+        destination: '/spotify',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
