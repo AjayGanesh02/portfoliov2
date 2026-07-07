@@ -1,0 +1,199 @@
+%-------------------------
+% Resume in Latex
+% Author : Gabriel Sison
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Random Stuff %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-7pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{0pt}]
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Commands  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-3pt}}
+  }
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubheadingContinue}[2]{
+  \vspace{-3pt}
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{0pt}}
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Heading  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}
+  % NAME
+  {\Huge\scshape Ajay Ganesh}
+  % SUBHEADING
+  \\ Software Engineer\\
+  \small
+  % EMAIL
+  \href{mailto:ajganesh2002@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{ajganesh2002@gmail.com}} ~
+  % LINKEDIN
+  \href{https://www.linkedin.com/in/ajay-ganesh/}{\raisebox{-0.2\height}\faLinkedin\ \underline{https://linkedin.com/in/ajay-ganesh}}  ~
+  % GITHUB
+  \href{https://github.com/AjayGanesh02}{\raisebox{-0.2\height}\faGithub\ \underline{https://github.com/AjayGanesh02}}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Education  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{University of Michigan}{Ann Arbor, MI}
+{Bachelors of Science in Computer Science, 3.73 GPA}{Graduated May 2024}
+% BULLET POINTS
+\resumeItemListStart
+\resumeItem{\textbf{Course Highlights:} Algorithms and Data Structures, Web Systems, Operating Systems, Distributed Systems, Computer Security, Compiler Construction, Discrete Mathematics, Machine Learning and Practical Data Science}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Technical Skills  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Technical Skills}
+
+\vspace{-7pt}
+\begin{itemize}
+  [leftmargin=0.15in, label={}]\small{\item{
+        % LANGUAGES
+        \textbf{Languages}{: Python, C++, Rust, Go, JavaScript/TypeScript, HTML/CSS, SQL} \\
+        % TECHNOLOGIES
+        \textbf{Technologies}{: React, MongoDB, PostgreSQL, Node.js, Git, Docker, Linux, AWS} \\}}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Experience  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experience}
+\resumeSubHeadingListStart
+
+% COMPANY 1
+\resumeSubheading
+{Meta}{Menlo Park, CA}
+% POSITION 1
+{Software Engineer}{June 2024 - Present}
+\resumeItemListStart
+\resumeItem{Currently working on the Applied AI Agent Data Optimization team to develop data and evaluation infrastructure supporting the training of Meta's frontier generative AI/LLM efforts}
+\resumeItem{Previously worked on the Ads Privacy Infra team, developing infrastructure in C++, Python, and Hack/PHP to support Meta's ads systems and their compliance with privacy regulations, safeguarding the data of billions of users and advertisers worldwide across Facebook, Instagram, and WhatsApp}
+\resumeItemListEnd
+
+% COMPANY 2
+\resumeSubheading
+{Deepgram}{Ann Arbor, MI}
+% POSITION 1
+{Software Engineering Intern}{May 2023 - Aug. 2023}
+\resumeItemListStart
+\resumeItem{Developed and deployed a Node.js backend service enabling speech recognition machine learning model usage on YouTube videos, used in a high-value client demo with potential revenue exceeding \$100k}
+\resumeItem{Optimized code for a Rust web API handling authorization and billing for Deepgram’s Natural Language Processing models, resulting in a 5 ms average decrease in response time and greater standardization of error messages}
+\resumeItem{Increased account signup conversions by 7\% by implementing an IP caching system in Rust and deploying it to on-premises data centers, giving new users increased exposure to Deepgram’s AI models}
+\resumeItemListEnd
+
+% COMPANY 3
+\resumeSubheading
+{Riot Games}{Ann Arbor, MI}
+% POSITION 1
+{Student Security Engineer - UM MDP Program}{Jan. 2023 - Present}
+\resumeItemListStart
+\resumeItem{Developed an extensible monitoring system using Python and Go to provide security engineers with real-time notifications for vulnerabilities in internal networks, contributing to increased operational efficiency}
+\resumeItem{Harnessed Amazon Web Services (Lambda, S3, CloudFormation) to create a deployment pipeline, allowing engineers to automatically deploy internal environment monitoring scripts in minutes}
+\resumeItem{Researched workflows with senior Information Security professionals to develop a continuous compliance dashboard in React, allowing executives to easily visualize the status of the organization’s attack surface}
+\resumeItemListEnd
+
+% COMPANY 4
+\resumeSubheading
+{CaringWire}{Columbus, OH}
+% POSITION 1
+{Software Engineering Intern}{Nov. 2021 - May 2022}
+\resumeItemListStart
+\resumeItem{Collaborated with senior developers and interns in an Agile environment to make updates and improvements to a web platform using Scrum ideologies, improving user experience for hundreds of caretakers and families}
+\resumeItem{Implemented features such as an auto-logout system, a database search autocomplete feature, and a cloud upload system for medical data, achieving HIPAA compliance and increasing usability for elderly consumers}
+\resumeItem{Improved a search feature by implementing a MongoDB data aggregation pipeline using TypeScript, leading to a 75\% increase in quantity of accurate results delivered to users}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  PROJECTS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Personal Projects}
+\resumeSubHeadingListStart
+
+% Project 1
+\resumeProjectHeading
+{Distributed Key-Value Database{\raisebox{-0.2\height}\ }}
+% Date
+{Oct. 2023}
+\resumeItemListStart
+\resumeItem{Tech Stack: Go, RPCs, AWS}
+\resumeItem{Leveraged the Paxos consensus algorithm to create a sharded key-value store in Golang, ensuring high consistency, fault-tolerance, and load balancing; further optimized by reducing network communication and custom garbage collection}
+\resumeItemListEnd
+
+% Project 3
+\resumeProjectHeading
+{C++ Thread Library{\raisebox{-0.2\height}\ }}
+% Date
+{Jan. 2023}
+\resumeItemListStart
+\resumeItem{Tech Stack: C++, Make, POSIX Threads}
+\resumeItem{Architected and Implemented a thread library from scratch in C++ to allow for greater concurrency, including synchronization through primitives such as locks and condition variables}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\end{document}

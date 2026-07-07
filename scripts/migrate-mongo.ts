@@ -42,6 +42,7 @@ type MapEntry = {
   kind: "project" | "experience" | "education";
   slug: string;
   skipTitle?: boolean; // resume rows: let the resume drive the title
+  skipOrder?: boolean; // resume experiences: rank by resume document order
 };
 
 const map: Record<string, MapEntry> = JSON.parse(
@@ -65,7 +66,7 @@ function toRow(doc: MongoDoc, entry: MapEntry) {
     externalUrl: doc.visit ?? null,
     dateRange: null,
     hidden: false,
-    sortOrder: doc.order ?? null,
+    sortOrder: entry.skipOrder ? null : doc.order ?? null,
   };
 }
 

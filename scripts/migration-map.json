@@ -1,16 +1,92 @@
 {
-  "Word Hunt Solver": { "source": "github", "sourceKey": "AjayGanesh02/WHSolver", "kind": "project", "slug": "word-hunt-solver" },
-  "TaskTango": { "source": "github", "sourceKey": "AjayGanesh02/TaskTango", "kind": "project", "slug": "tasktango" },
-  "ER Bot": { "source": "github", "sourceKey": "AjayGanesh02/ER_bot", "kind": "project", "slug": "er-bot" },
-  "Portfolio v1": { "source": "github", "sourceKey": "AjayGanesh02/portfolio-website", "kind": "project", "slug": "portfolio-v1" },
-  "CaringWire - Software Engineering Intern": { "source": "resume", "sourceKey": "experience/caringwire", "kind": "experience", "slug": "caringwire", "skipTitle": true },
-  "Riot Games - UMich MDP Team Student Security Engineer": { "source": "resume", "sourceKey": "experience/riot-games", "kind": "experience", "slug": "riot-games", "skipTitle": true },
-  "Deepgram - Software Engineering Intern": { "source": "resume", "sourceKey": "experience/deepgram", "kind": "experience", "slug": "deepgram", "skipTitle": true },
-  "C++ Thread Library": { "source": "resume", "sourceKey": "projects/c-thread-library", "kind": "project", "slug": "c-thread-library" },
-  "Assembler, Linker, and Simulator": { "source": "manual", "sourceKey": "assembler-linker-and-simulator", "kind": "project", "slug": "assembler-linker-and-simulator" },
-  "Forum Post Classifier": { "source": "manual", "sourceKey": "forum-post-classifier", "kind": "project", "slug": "forum-post-classifier" },
-  "Content Aware Image Resizer": { "source": "manual", "sourceKey": "content-aware-image-resizer", "kind": "project", "slug": "content-aware-image-resizer" },
-  "Insta485": { "source": "manual", "sourceKey": "insta485", "kind": "project", "slug": "insta485" },
-  "Virtual Memory Manager": { "source": "manual", "sourceKey": "virtual-memory-manager", "kind": "project", "slug": "virtual-memory-manager" },
-  "Network File System": { "source": "manual", "sourceKey": "network-file-system", "kind": "project", "slug": "network-file-system" }
+  "Word Hunt Solver": {
+    "source": "github",
+    "sourceKey": "AjayGanesh02/WHSolver",
+    "kind": "project",
+    "slug": "word-hunt-solver"
+  },
+  "TaskTango": {
+    "source": "github",
+    "sourceKey": "AjayGanesh02/TaskTango",
+    "kind": "project",
+    "slug": "tasktango"
+  },
+  "ER Bot": {
+    "source": "github",
+    "sourceKey": "AjayGanesh02/ER_bot",
+    "kind": "project",
+    "slug": "er-bot"
+  },
+  "Portfolio v1": {
+    "source": "github",
+    "sourceKey": "AjayGanesh02/portfolio-website",
+    "kind": "project",
+    "slug": "portfolio-v1"
+  },
+  "CaringWire - Software Engineering Intern": {
+    "source": "resume",
+    "sourceKey": "experience/caringwire",
+    "kind": "experience",
+    "slug": "caringwire",
+    "skipTitle": true,
+    "skipOrder": true
+  },
+  "Riot Games - UMich MDP Team Student Security Engineer": {
+    "source": "resume",
+    "sourceKey": "experience/riot-games",
+    "kind": "experience",
+    "slug": "riot-games",
+    "skipTitle": true,
+    "skipOrder": true
+  },
+  "Deepgram - Software Engineering Intern": {
+    "source": "resume",
+    "sourceKey": "experience/deepgram",
+    "kind": "experience",
+    "slug": "deepgram",
+    "skipTitle": true,
+    "skipOrder": true
+  },
+  "C++ Thread Library": {
+    "source": "resume",
+    "sourceKey": "projects/c-thread-library",
+    "kind": "project",
+    "slug": "c-thread-library"
+  },
+  "Assembler, Linker, and Simulator": {
+    "source": "manual",
+    "sourceKey": "assembler-linker-and-simulator",
+    "kind": "project",
+    "slug": "assembler-linker-and-simulator"
+  },
+  "Forum Post Classifier": {
+    "source": "manual",
+    "sourceKey": "forum-post-classifier",
+    "kind": "project",
+    "slug": "forum-post-classifier"
+  },
+  "Content Aware Image Resizer": {
+    "source": "manual",
+    "sourceKey": "content-aware-image-resizer",
+    "kind": "project",
+    "slug": "content-aware-image-resizer"
+  },
+  "Insta485": {
+    "source": "manual",
+    "sourceKey": "insta485",
+    "kind": "project",
+    "slug": "insta485"
+  },
+  "Virtual Memory Manager": {
+    "source": "manual",
+    "sourceKey": "virtual-memory-manager",
+    "kind": "project",
+    "slug": "virtual-memory-manager"
+  },
+  "Network File System": {
+    "source": "manual",
+    "sourceKey": "network-file-system",
+    "kind": "project",
+    "slug": "network-file-system"
+  }
 }
