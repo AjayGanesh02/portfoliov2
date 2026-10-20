@@ -1,5 +1,16 @@
+import fs from 'fs'
+
+// photo album: every image in public/album, sorted by filename (see lib/album.ts)
+const albumPhotos = fs
+  .readdirSync(new URL('./public/album', import.meta.url))
+  .filter((f) => /\.(jpe?g|png|webp|avif|gif)$/i.test(f))
+  .sort((a, b) => a.localeCompare(b))
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  env: {
+    ALBUM_PHOTOS: JSON.stringify(albumPhotos),
+  },
   images: {
     remotePatterns: [
       {
@@ -10,9 +21,6 @@ const nextConfig = {
         hostname: 'i.scdn.co',
         port: "",
         pathname: "/image/*"
-      }, {
-        protocol: 'https',
-        hostname: '*.public.blob.vercel-storage.com',
       },
     ],
   },
@@ -28,4 +36,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+export default nextConfig

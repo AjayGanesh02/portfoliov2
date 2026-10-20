@@ -1,23 +1,16 @@
-import { list } from "@vercel/blob";
-
 export type AlbumImage = {
   url: string;
   pathname: string;
 };
 
 /**
- * Photo album images live in Vercel Blob under the `album/` prefix.
- * Adding a photo to the site = uploading one blob; no code change.
- * Returns [] when the store is unreachable so the header degrades gracefully.
+ * Photo album images are static files in `public/album/`, served with the site
+ * bundle. The file list is read at build time in next.config.mjs (exposed as
+ * ALBUM_PHOTOS), so adding a photo = dropping a file in that folder and
+ * redeploying. Returns [] when the folder is empty so the header degrades
+ * gracefully.
  */
-export async function getAlbumImages(): Promise<AlbumImage[]> {
-  try {
-    const { blobs } = await list({ prefix: "album/" });
-    return blobs
-      .filter((b) => b.size > 0)
-      .sort((a, b) => a.pathname.localeCompare(b.pathname))
-      .map((b) => ({ url: b.url, pathname: b.pathname }));
-  } catch {
-    return [];
-  }
+export function getAlbumImages(): AlbumImage[] {
+  const files: string[] = JSON.parse(process.env.ALBUM_PHOTOS || "[]");
+  return files.map((f) => ({ url: `/album/${encodeURIComponent(f)}`, pathname: `album/${f}` }));
 }
