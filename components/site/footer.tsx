@@ -1,7 +1,7 @@
 const links = [
   { label: "github", href: "https://github.com/AjayGanesh02" },
   { label: "linkedin", href: "https://www.linkedin.com/in/ajay-ganesh/" },
-  { label: "resume", href: "https://github.com/AjayGanesh02/AGResume/raw/main/main.pdf" },
+  { label: "resume", href: "https://drive.google.com/file/d/16OfwHaL3uAmaRH4SUelHejZcd977_-Wj/view" },
   { label: "email", href: "mailto:ajganesh2002@gmail.com" },
 ];
 
