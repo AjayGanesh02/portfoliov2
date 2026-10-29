@@ -12,10 +12,11 @@ export default async function Home() {
       <section className="space-y-4">
         <p>
           Hi, I&apos;m Ajay — a software engineer at{" "}
-          <span className="font-medium">Meta</span>, where I work on data and
-          evaluation infrastructure for training generative AI models.
-          Previously I built ads privacy infrastructure there, and before that
-          I studied computer science at the University of Michigan (BS
+          <span className="font-medium">Meta</span>, where I build ads privacy
+          infrastructure that keeps user and advertiser data compliant with
+          privacy regulations. Previously I worked on data and evaluation
+          infrastructure for training Meta&apos;s LLMs, and before that I
+          studied computer science at the University of Michigan (BS
           &rsquo;24).
         </p>
         <p className="text-neutral-600 dark:text-neutral-400">
