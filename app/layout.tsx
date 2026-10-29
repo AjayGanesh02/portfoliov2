@@ -24,7 +24,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const photos = await getAlbumImages();
+  const photos = getAlbumImages();
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${mono.variable}`}>
       <body className="bg-white font-sans text-[15px]/relaxed text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100">
